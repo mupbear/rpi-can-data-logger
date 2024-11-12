@@ -15,7 +15,7 @@ async def main():
 
     logging.basicConfig(stream=sys.stdout, format='%(asctime)s %(message)s', level=logging.INFO)
     
-    raw_data_sender = RawDataSender(user='MORE', password='MORE', host='regterschotdb2.cxicg0q4yzp8.eu-central-1.rds.amazonaws.com', database='atari-regtertestdata', port='3306')
+    raw_data_sender = RawDataSender(user='Zilhouette1006', password='Zilhouette1006', host='regterschotdb2.cxicg0q4yzp8.eu-central-1.rds.amazonaws.com', database='atari-regtertestdata', port='3306')
     queue_data_callback = lambda msg: raw_data_sender.queue(msg.arbitration_id, msg.data)
 
     bus = can.Bus(interface='socketcan', channel='can0')
